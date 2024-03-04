@@ -6,6 +6,7 @@ import AllMovie from "./Components/AllMovie";
 import AddMovie from "./Components/AddMovie";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import EditMovies from "./Components/EditMovies";
 
 const routes = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const routes = createBrowserRouter([
   {
     path: "/addMovies",
     element: <AddMovie />,
+  },
+  {
+    path: "/editMovies/:movie_id",
+    element: <EditMovies />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { IoIosAddCircle } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
+import { MdEdit } from "react-icons/md";
 
 const AllMovie = () => {
   const [movies, Setmovie] = useState([]);
@@ -55,7 +56,14 @@ const AllMovie = () => {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="flex gap-2 justify-center ">
+                    <MdEdit
+                      className="hover:cursor-pointer hover:text-red-500 text-[floralwhite]"
+                      onClick={() => {
+                        navigate(`/editMovies/${movie._id}`);
+                      }}
+                    />
+
                     <MdDelete
                       className="hover:cursor-pointer hover:text-red-500 text-[floralwhite]"
                       onClick={() => {
